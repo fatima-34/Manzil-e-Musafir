@@ -50,11 +50,12 @@
             android:weightSum="6"
             android:orientation="horizontal"
             android:paddingLeft="15dp">
-<!--            <ImageView-->
-<!--                android:layout_width= "wrap_content"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_weight="1"-->
-<!--                android:src="@drawable/calender"/>-->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/calender"
+                android:layout_gravity="center"/>
             <TextView
                 android:id="@+id/date"
                 android:layout_width="wrap_content"
@@ -71,17 +72,18 @@
             android:weightSum="6"
             android:orientation="horizontal"
             android:paddingLeft="15dp">
-<!--            <ImageView-->
-<!--                android:layout_width= "wrap_content"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:layout_weight="1"-->
-<!--                android:src="@drawable/weather"/>-->
+            <ImageView
+                android:layout_width= "0dp"
+                android:layout_height="20dp"
+                android:layout_weight="1"
+                android:src="@drawable/weather"
+                android:layout_gravity="center"/>
             <TextView
                 android:id="@+id/duration"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="5"
-                android:text="Duration"
+                android:text="  Duration"
                 android:textSize="20dp"
                 android:textColor="@color/black"/>
         </LinearLayout>
