@@ -8,141 +8,170 @@
     android:padding="20dp"
     tools:context=".TripDetails">
 
-    <TextView
-        android:id="@+id/detail"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Details"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:textAlignment="center"
-        android:layout_centerHorizontal="true"
-        android:textAllCaps="true"/>
+        android:layout_weight="0.1"
+        android:weightSum="4"
+        android:orientation="horizontal"
+        android:id="@+id/detail">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="10dp"
+            android:layout_height="30dp"
+            android:src="@drawable/send_btn"
+            android:layout_weight="0.5"
+            android:clickable="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:text="Details"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textAllCaps="true"/>
+    </LinearLayout>
+
     <ImageView
         android:id="@+id/placeImage"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginTop="30dp"
-        android:layout_below="@+id/detail"
+        android:layout_below="@+id/location_details"
         android:src="@drawable/grey_rectangle"/>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/scroll"
         android:layout_below="@+id/placeImage">
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="10"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:id="@+id/relativee">
             <TextView
-                android:id="@+id/location"
+                android:layout_below="@+id/Location_trip_details"
+                android:id="@+id/price_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Location"
-                android:textSize="25dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                android:layout_marginTop="20dp"
-                android:layout_weight="1"/>
-            <TextView
-                android:id="@+id/price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Price"
-                android:textColor="@color/black"
-                android:textSize="23dp"
-                android:textStyle="bold"
-                android:layout_weight="1"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"/>
-            <TextView
-                android:id="@+id/tripDetail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Manzil-e-Musafir is here with its first stay trip to the beautiful snowy sights of Malam Jabba. Expect a fun-filled, exciting, and adventurous trip with us. Join us for a Stay trip on 4th February and make unforgettable memories."
-                android:textColor="@color/black"
-                android:textSize="15dp"
-                android:layout_weight="1" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Location:"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="64dp"
+                android:hint="Price"
                 android:textColor="@color/black"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:layout_weight="1"/>
+                android:textStyle="bold" />
+
             <TextView
-                android:paddingLeft="20dp"
-                android:id="@+id/locationDetail"
+                android:layout_below="@+id/details_trip_details"
+                android:id="@+id/details_text"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="236dp" />
+
+            <TextView
+                android:id="@+id/itinerary_text"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/itinerary_trip_details"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="304dp" />
+
+            <TextView
+                android:id="@+id/itinerary_trip_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Exact Location"
+                android:layout_below="@id/details_text"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="273dp"
+                android:text="Itinerary"
                 android:textColor="@color/black"
-                android:textSize="15dp"
-                android:layout_weight="1" />
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"/>
-            <TextView
+                android:id="@+id/details_trip_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/description_details"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="204dp"
                 android:text="Details:"
                 android:textColor="@color/black"
                 android:textSize="20dp"
-                android:textStyle="bold"
-                android:layout_weight="1"/>
+                android:textStyle="bold" />
+
             <TextView
-                android:paddingLeft="20dp"
-                android:id="@+id/activityDetail"
-                android:layout_width="wrap_content"
+                android:id="@+id/description_details"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
-                android:text="All activity details"
+                android:layout_below="@+id/price_details"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="99dp"
+                android:text="Manzil-e-Musafir is here with its first stay trip to the beautiful snowy sights of Malam Jabba. Expect a fun-filled, exciting, and adventurous trip with us. Join us for a Stay trip on 4th February and make unforgettable memories."
                 android:textColor="@color/black"
-                android:textSize="15dp"
-                android:layout_weight="1" />
+                android:textSize="15dp" />
+
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"/>
-            <TextView
+                android:id="@+id/Location_trip_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Itinerary:"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="19dp"
+                android:hint="Location"
                 android:textColor="@color/black"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:layout_weight="1"/>
-            <TextView
-                android:paddingLeft="20dp"
-                android:id="@+id/itineraryDetail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="All route details"
-                android:textColor="@color/black"
-                android:textSize="15dp"
-                android:layout_weight="1" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"/>
-            <Button
-                android:id="@+id/register"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Register"
-                android:textStyle="bold"
-                android:textSize="15dp"
-                android:layout_gravity="center"/>
-        </LinearLayout>
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="362dp"
+        android:text="Register"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/chat_bubble_trip_details"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/baseline_chat_bubble_24"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:id="@+id/location_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:text="Location"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/detail"/>
 
 </RelativeLayout>

@@ -16,6 +16,8 @@ import android.widget.Toast;
 
 import com.vishnusivadas.advanced_httpurlconnection.PutData;
 
+import java.util.UUID;
+
 public class AddTrip extends AppCompatActivity {
 
     EditText place, price, description, location, details, itinerary;
@@ -51,29 +53,33 @@ public class AddTrip extends AppCompatActivity {
         addTrip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String id = UUID.randomUUID().toString();
+                String TID = id.toString().substring(0,8);
                 //Start ProgressBar first (Set visibility VISIBLE)
                 Handler handler = new Handler(Looper.getMainLooper());
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
-                        String[] field = new String[7];
-                        field[0] = "place";
-                        field[1] = "price";
-                        field[2] = "description";
-                        field[3] = "location";
-                        field[4] = "details";
-                        field[5] = "itinerary";
-                        field[6] = "picture";
+                        String[] field = new String[8];
+                        field[0] = "TID";
+                        field[1] = "place";
+                        field[2] = "price";
+                        field[3] = "description";
+                        field[4] = "location";
+                        field[5] = "details";
+                        field[6] = "itinerary";
+                        field[7] = "picture";
                         //Creating array for data
-                        String[] data = new String[7];
-                        data[0] = place.getText().toString();
-                        data[1] = price.getText().toString();
-                        data[2] = description.getText().toString();
-                        data[3] = location.getText().toString();
-                        data[4] = details.getText().toString();
-                        data[5] = itinerary.getText().toString();
-                        data[6] = imagePath;
-                        PutData putData = new PutData("http://192.168.18.114/manzilmusafir/addtrip.php", "POST", field, data);
+                        String[] data = new String[8];
+                        data[0] = TID;
+                        data[1] = place.getText().toString();
+                        data[2] = price.getText().toString();
+                        data[3] = description.getText().toString();
+                        data[4] = location.getText().toString();
+                        data[5] = details.getText().toString();
+                        data[6] = itinerary.getText().toString();
+                        data[7] = imagePath;
+                        PutData putData = new PutData("http://172.17.64.106/manzilmusafir/addtrip.php", "POST", field, data);
                         if (putData.startPut()) {
                             if (putData.onComplete()) {
                                 String result = putData.getResult();

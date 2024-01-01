@@ -37,7 +37,7 @@
                 android:id="@+id/picture"
                 android:src="@drawable/cam"
                 android:layout_marginTop="-30dp"
-                android:layout_marginLeft="330dp"
+                android:layout_marginLeft="320dp"
                 android:clickable="true" />
             <TextView
                 android:layout_marginTop="5dp"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:weightSum="2"
     android:paddingLeft="45dp"
@@ -13,11 +13,13 @@
         android:layout_height="wrap_content"
         android:layout_weight="0.75"
         android:weightSum="5.1"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/grey">
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
             android:layout_weight="4"
+            android:id="@+id/picture"
             android:src="@drawable/grey_rectangle" />
         <TextView
             android:id="@+id/location"
@@ -25,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.1"
             android:paddingLeft="15dp"
-            android:text="Location"
+            android:hint="Location"
             android:textStyle="bold"
             android:textSize="30dp"
             android:textColor="@color/black"/>
@@ -35,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.1"
             android:paddingLeft="15dp"
-            android:text="Price"
+            android:hint="price"
             android:textStyle="bold"
             android:textSize="23dp"
             android:textColor="@color/black"/>
@@ -43,54 +45,54 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.1"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.3"
-            android:weightSum="6"
-            android:orientation="horizontal"
-            android:paddingLeft="15dp">
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="25dp"
-                android:layout_weight="1"
-                android:src="@drawable/calender"
-                android:layout_gravity="center"/>
-            <TextView
-                android:id="@+id/date"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:text="Date"
-                android:textSize="20dp"
-                android:textColor="@color/black" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.3"
-            android:weightSum="6"
-            android:orientation="horizontal"
-            android:paddingLeft="15dp">
-            <ImageView
-                android:layout_width= "0dp"
-                android:layout_height="20dp"
-                android:layout_weight="1"
-                android:src="@drawable/weather"
-                android:layout_gravity="center"/>
-            <TextView
-                android:id="@+id/duration"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:text="  Duration"
-                android:textSize="20dp"
-                android:textColor="@color/black"/>
-        </LinearLayout>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.1"/>
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="0.3"-->
+<!--            android:weightSum="6"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingLeft="15dp">-->
+<!--            <ImageView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="25dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:src="@drawable/calender"-->
+<!--                android:layout_gravity="center"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/date"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="5"-->
+<!--                android:text="Date"-->
+<!--                android:textSize="20dp"-->
+<!--                android:textColor="@color/black" />-->
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="0.3"-->
+<!--            android:weightSum="6"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingLeft="15dp">-->
+<!--            <ImageView-->
+<!--                android:layout_width= "0dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:src="@drawable/weather"-->
+<!--                android:layout_gravity="center"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/duration"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="5"-->
+<!--                android:text="  Duration"-->
+<!--                android:textSize="20dp"-->
+<!--                android:textColor="@color/black"/>-->
+<!--        </LinearLayout>-->
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="0.1"/>-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -103,6 +105,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1.5"/>
             <Button
+                android:id="@+id/detail_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Details"

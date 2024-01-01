@@ -33,7 +33,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Name"
+                android:text="CINIC"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 >
@@ -44,8 +44,8 @@
                 android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter name"
-                android:id="@+id/name"
+                android:hint="Enter CNIC"
+                android:id="@+id/CNIC"
                 android:singleLine="true"
                 android:textSize="15dp"
                 android:background="@drawable/round_corner"
@@ -55,20 +55,21 @@
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Contact Number"
+                android:text="Emergency Contact Number"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 >
             </TextView>
 
             <EditText
-                android:id="@+id/contact"
+                android:id="@+id/emergency_contact_number"
                 android:layout_width="361dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/round_corner"
-                android:hint="Enter contact number"
+                android:inputType="phone"
+                android:hint="Enter number"
                 android:padding="10dp"
                 android:singleLine="true"
                 android:textSize="15dp"></EditText>
@@ -76,7 +77,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Emergency Contact"
+                android:text="Emergency Contact Relation"
                 android:textSize="20dp"
                 android:textStyle="bold">
             </TextView>
@@ -86,58 +87,13 @@
                 android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter emergency contact"
-                android:id="@+id/emergency"
-                android:singleLine="true"
-                android:textSize="15dp"
-                android:background="@drawable/round_corner"
-                >
-            </EditText>
-            <TextView
-                android:layout_marginTop="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Emergency Contact Relation"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                >
-            </TextView>
-            <EditText
-                android:id="@+id/relation"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:hint="Enter relation"
+                android:id="@+id/emergency_contact_relation"
                 android:singleLine="true"
                 android:textSize="15dp"
                 android:background="@drawable/round_corner"
                 >
             </EditText>
-            <TextView
-                android:layout_marginTop="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="CNIC"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                >
-            </TextView>
-            <EditText
-                android:id="@+id/cnic"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter cnic"
-                android:singleLine="true"
-                android:textSize="15dp"
-                android:background="@drawable/round_corner"
-                >
-            </EditText>
-
             <TextView
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
@@ -154,14 +110,37 @@
                 android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Upload payment screenshot"
+                android:hint="Upload Screenshot"
                 android:singleLine="true"
                 android:textSize="15dp"
                 android:background="@drawable/round_corner"
                 >
             </EditText>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tickets"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                >
+            </TextView>
+            <EditText
+                android:id="@+id/tickets"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter number of tickets"
+                android:singleLine="true"
+                android:inputType="number"
+                android:textSize="15dp"
+                android:background="@drawable/round_corner"
+                >
+            </EditText>
             <Button
-                android:id="@+id/register"
+                android:id="@+id/register_final"
                 android:layout_marginTop="35dp"
                 android:padding="5dp"
                 android:layout_width="200dp"
